@@ -29,29 +29,47 @@
    Applies to plain tags with no classes. Add utilities on top to tweak. */
 @layer base {
   body {
-    @apply bg-grey font-body text-base leading-relaxed font-medium text-ink antialiased;
+    @apply bg-grey font-body text-ink text-base font-medium leading-relaxed antialiased;
   }
 
   h1,
   h2,
   h3,
   h4 {
-    @apply font-display font-bold text-balance;
+    @apply font-display text-balance font-bold;
   }
-  h1 { @apply text-4xl leading-tight tracking-tight md:text-5xl; }
-  h2 { @apply text-2xl leading-snug tracking-tight md:text-3xl; }
-  h3 { @apply text-xl leading-snug; }
-  h4 { @apply text-lg; }
+  h1 {
+    @apply text-4xl leading-tight tracking-tight md:text-5xl;
+  }
+  h2 {
+    @apply text-2xl leading-snug tracking-tight md:text-3xl;
+  }
+  h3 {
+    @apply text-xl leading-snug;
+  }
+  h4 {
+    @apply text-lg;
+  }
 
-  p { @apply max-w-prose; }
+  p {
+    @apply max-w-prose;
+  }
 
-  a { @apply underline decoration-2 underline-offset-4 hover:bg-mint; }
+  a {
+    @apply hover:bg-mint underline decoration-2 underline-offset-4;
+  }
 
   code,
   kbd,
-  pre { @apply font-mono text-sm; }
+  pre {
+    @apply font-mono text-sm;
+  }
 
-  small { @apply text-sm text-muted; }
+  small {
+    @apply text-muted text-sm;
+  }
 
-  :focus-visible { @apply outline-2 outline-offset-2 outline-ink; }
+  :focus-visible {
+    @apply outline-ink outline-2 outline-offset-2;
+  }
 }
