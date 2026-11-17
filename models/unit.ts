@@ -6,9 +6,7 @@ export interface UnitData {
   number: string
   /** Unit name, e.g. 'JavaScript Fundamentals'. */
   name: string
-
 }
-
 
 /** A unit as stored in the database. */
 export interface Unit extends UnitData {
@@ -24,12 +22,3 @@ export interface UnitSummary extends Unit {
 export interface UnitWithLessons extends Unit {
   lessons: Lesson[]
 }
-
-
-
-
-
-
-
-
-

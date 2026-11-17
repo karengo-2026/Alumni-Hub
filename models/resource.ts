@@ -1,4 +1,5 @@
-export type ResourceType = 'Docs' | 'Handbook' | 'Guide' | 'Cheatsheet' | 'Video'
+export type ResourceType =
+  'Docs' | 'Handbook' | 'Guide' | 'Cheatsheet' | 'Video'
 
 export interface ResourceData {
   unitId: number | null // null = General

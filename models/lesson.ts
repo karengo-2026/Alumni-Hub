@@ -4,7 +4,6 @@ import type { Resource } from './resource.ts'
 /** Where a lesson comes from: the Student Handbook, or an extra from the Karengo 2026 Miro board. */
 export type LessonSource = 'handbook' | 'miro'
 
-
 /** A lesson inside a unit, e.g. 04 Data Types. Fields needed to create one. */
 export interface LessonData {
   /** The unit this lesson belongs to. */
@@ -20,7 +19,6 @@ export interface LessonData {
   handbookUrl: string | null
   /** The lesson's folder in the code-from-class repo (org members only). */
   codeFromClassUrl: string | null
- 
 }
 
 /** A lesson as stored in the database. */
@@ -38,12 +36,3 @@ export interface LessonDetail extends Lesson {
   previousLessonId: number | null
   nextLessonId: number | null
 }
-
-
-
-
-
-
-
-
-
