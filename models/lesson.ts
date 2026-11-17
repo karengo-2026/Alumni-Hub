@@ -1,27 +1,49 @@
 import type { Lecture } from './lecture.ts'
 import type { Resource } from './resource.ts'
 
+/** Where a lesson comes from: the Student Handbook, or an extra from the Karengo 2026 Miro board. */
 export type LessonSource = 'handbook' | 'miro'
 
+
+/** A lesson inside a unit, e.g. 04 Data Types. Fields needed to create one. */
 export interface LessonData {
+  /** The unit this lesson belongs to. */
   unitId: number
-  position: number // order inside the unit, 1 = first
+  /** The lesson's number within its unit, matching the handbook (1 = first, shown as 01). */
+  lessonNumber: number
+  /** Lesson name, e.g. 'Data Types'. */
   name: string
-  note: string | null // short line under the name
+  /** One-line summary shown under the name, e.g. 'Strings, numbers, booleans and objects'. */
+  description: string | null
   source: LessonSource
-  handbookUrl: string | null // null for Miro items
-  codeUrl: string | null
-  slidesUrl: string | null
+  /** The lesson's page in the public Student Handbook. Null for Miro extras, which have no page. */
+  handbookUrl: string | null
+  /** The lesson's folder in the code-from-class repo (org members only). */
+  codeFromClassUrl: string | null
+ 
 }
 
+/** A lesson as stored in the database. */
 export interface Lesson extends LessonData {
   id: number
 }
 
-// GET /api/v1/lessons/:id (Lesson page)
+/** Everything the Lesson page needs (GET /api/v1/lessons/:id). */
 export interface LessonDetail extends Lesson {
-  lectures: Lecture[] // ordered by position
-  resources: Resource[] // resources that fit this lesson
-  prevLessonId: number | null
+  /** Lecture videos in the order they should be watched. */
+  lectures: Lecture[]
+  /** Resources and guides matched to this lesson. */
+  resources: Resource[]
+  /** For the Previous / Next buttons. Null at the start or end of a unit. */
+  previousLessonId: number | null
   nextLessonId: number | null
 }
+
+
+
+
+
+
+
+
+
