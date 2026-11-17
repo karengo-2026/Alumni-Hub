@@ -34,7 +34,7 @@ export default {
     pool: {
       afterCreate: (conn, cb) => {
         conn.prepare('PRAGMA foreign_keys = ON').run()
-        cb()
+        cb(null, conn)
       },
     },
   },
@@ -48,7 +48,7 @@ export default {
     pool: {
       afterCreate: (conn, cb) => {
         conn.prepare('PRAGMA foreign_keys = ON').run()
-        cb()
+        cb(null, conn)
       },
     },
   },
