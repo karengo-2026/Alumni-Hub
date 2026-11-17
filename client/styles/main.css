@@ -1,1 +1,57 @@
-@import 'tailwindcss'
+/* Google Fonts must be imported before Tailwind */
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=DM+Mono:wght@400;500&display=swap');
+@import 'tailwindcss';
+
+/* ---------- Master tokens ----------
+   Each colour becomes bg-*, text-*, border-* (e.g. bg-mint, text-ink, border-line)
+   Each font becomes font-* (font-display, font-body, font-mono) */
+@theme {
+  /* Brand */
+  --color-ink: #000000;
+  --color-paper: #f2f2ef;
+  --color-surface: #ffffff;
+  --color-mint: #03ff9e;
+  --color-lilac: #cc97ff;
+  --color-yellow: #fff061;
+
+  /* Neutrals */
+  --color-grey: #e2e2e2;
+  --color-muted: #4d4d4d;
+  --color-line: #000000;
+
+  /* Fonts */
+  --font-display: 'Space Grotesk', 'Inter Tight', Arial, sans-serif;
+  --font-body: 'Inter Tight', Arial, sans-serif;
+  --font-mono: 'DM Mono', ui-monospace, Menlo, monospace;
+}
+
+/* ---------- Default typography ----------
+   Applies to plain tags with no classes. Add utilities on top to tweak. */
+@layer base {
+  body {
+    @apply bg-grey font-body text-base leading-relaxed font-medium text-ink antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display font-bold text-balance;
+  }
+  h1 { @apply text-4xl leading-tight tracking-tight md:text-5xl; }
+  h2 { @apply text-2xl leading-snug tracking-tight md:text-3xl; }
+  h3 { @apply text-xl leading-snug; }
+  h4 { @apply text-lg; }
+
+  p { @apply max-w-prose; }
+
+  a { @apply underline decoration-2 underline-offset-4 hover:bg-mint; }
+
+  code,
+  kbd,
+  pre { @apply font-mono text-sm; }
+
+  small { @apply text-sm text-muted; }
+
+  :focus-visible { @apply outline-2 outline-offset-2 outline-ink; }
+}
