@@ -23,7 +23,10 @@ const checkJwt = jwt({
 export default checkJwt
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export interface JwtRequest<TReq = any, TRes = any>
-  extends Request<ParamsDictionary, TRes, TReq> {
+export interface JwtRequest<TReq = any, TRes = any> extends Request<
+  ParamsDictionary,
+  TRes,
+  TReq
+> {
   auth?: JwtPayload
 }
