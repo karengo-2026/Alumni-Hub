@@ -1,15 +1,14 @@
 /**
- * @param { import("knex").Knex } knex
- * @returns { Promise<void> }
+ * @param {import('knex').Knex} knex
  */
-exports.up = function(knex) {
-  
-};
+export async function up(knex) {
+  return knex.schema.createTable('units', (table) => {
+    table.increments('id')
+    table.string('number').notNullable().unique() // '01'
+    table.string('name').notNullable()
+  })
+}
 
-/**
- * @param { import("knex").Knex } knex
- * @returns { Promise<void> }
- */
-exports.down = function(knex) {
-  
-};
+export async function down(knex) {
+  return knex.schema.dropTable('units')
+}
