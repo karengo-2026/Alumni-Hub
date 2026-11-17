@@ -84,9 +84,6 @@
     "sqlite3": {
       "node-gyp": "12.2.0"
     },
-    "@typescript-eslint/eslint-plugin": "^7.18.0",
-    "@typescript-eslint/parser": "^7.18.0",
-    "@typescript-eslint/typescript-estree": "^7.18.0",
     "tar": "^7.5.21"
   },
   "prettier": {
