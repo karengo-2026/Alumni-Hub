@@ -6,12 +6,7 @@ export interface UnitData {
   number: string
   /** Unit name, e.g. 'JavaScript Fundamentals'. */
   name: string
-  /** The unit's page in the public Student Handbook. */
-  handbookUrl: string
-  /** The unit's folder in the karengo-2026 code-from-class repo (org members only). */
-  codeFromClassFolderUrl: string | null
-  /** The unit's lecture playlist on YouTube. */
-  playlistUrl: string | null
+
 }
 
 
