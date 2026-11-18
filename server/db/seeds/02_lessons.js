@@ -11,7 +11,7 @@ export async function seed(knex) {
       unit_id: 1,
       lesson_number: 1,
       name: 'Pair Programming',
-      description: 'How we work together, not a part of the code.',
+      description: 'A software development technique where two developers work together on the same code. Typically, one writes the code (the driver) while the other reviews, provides suggestions, and thinks ahead (the navigator).',
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/01-javascript/01-pair-programming',
@@ -24,7 +24,7 @@ export async function seed(knex) {
       lesson_number: 2,
       name: 'Git and GitHub',
       description:
-        'Version control for the whole project, every folder and file.',
+        'Git is a version control system that tracks changes to code, allowing developers to manage different versions and collaborate safely. GitHub is an online platform that hosts Git repositories, making it easier to share code and collaborate with other developers.',
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/01-javascript/02-git-and-github',
@@ -36,7 +36,7 @@ export async function seed(knex) {
       unit_id: 1,
       lesson_number: 3,
       name: 'Node.js',
-      description: null,
+      description: 'A JavaScript runtime environment that allows developers to run JavaScript outside the browser, commonly on servers. It enables developers to build backend applications and APIs using JavaScript.',
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/01-javascript/03-node-and-npm',
@@ -49,7 +49,7 @@ export async function seed(knex) {
       lesson_number: 4,
       name: 'Data Types',
       description:
-        'Strings, numbers, booleans and objects: used in every file.',
+        'Categories that define what kind of data a variable can store and how that data can be used. Common JavaScript data types include strings, numbers, booleans, objects, undefined and null.',
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/01-javascript/04-data-types',
@@ -62,7 +62,7 @@ export async function seed(knex) {
       lesson_number: 5,
       name: 'First-class Functions',
       description:
-        'Functions passed around as values, like onClick handlers, .map() callbacks and Express route handlers.',
+        'A programming concept where functions are treated like any other value in a language. This means they can be assigned to variables, passed as arguments to other functions, and returned from functions.',
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/01-javascript/05-first-class-functions',
@@ -74,7 +74,7 @@ export async function seed(knex) {
       unit_id: 1,
       lesson_number: 6,
       name: 'Data Structures',
-      description: null,
+      description: 'Ways of organising and storing data so it can be accessed, modified, and managed efficiently. Common examples include arrays, objects, linked lists, stacks, queues, and trees.',
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/01-javascript/06-data-structures',
@@ -86,7 +86,7 @@ export async function seed(knex) {
       unit_id: 1,
       lesson_number: 7,
       name: 'Testing with Vitest',
-      description: 'Test files (*.test.ts) sit next to the code they test.',
+      description: 'Vitest is a JavaScript testing framework used to check that code behaves as expected. It allows developers to write and run automated tests to catch bugs and ensure individual functions and components work correctly.',
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/01-javascript/07-testing-with-vitest',
@@ -98,7 +98,7 @@ export async function seed(knex) {
       unit_id: 1,
       lesson_number: 8,
       name: 'Writing Tests',
-      description: 'Applies to any part of the app.',
+      description: 'The process of creating instructions that check whether code behaves as expected under different conditions. Tests help identify bugs, verify functionality, and prevent existing features from breaking when code is changed.',
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/01-javascript/08-writing-tests',
@@ -110,7 +110,7 @@ export async function seed(knex) {
       unit_id: 1,
       lesson_number: 9,
       name: 'Test-driven Development',
-      description: 'Write the test first, then the code that makes it pass.',
+      description: 'A software development approach where tests are written before the actual code. Developers follow a cycle of writing a failing test, implementing code to make it pass, and then refactoring the code to improve its quality.',
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/01-javascript/09-tdd',
@@ -122,7 +122,7 @@ export async function seed(knex) {
       unit_id: 1,
       lesson_number: 10,
       name: 'Introduction to TypeScript',
-      description: null,
+      description: 'TypeScript is a programming language built on JavaScript that adds static typing, allowing developers to define the types of data their code should use. This helps catch errors during development and makes larger codebases easier to maintain.',
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/01-javascript/10-typescript-intro',
@@ -134,7 +134,7 @@ export async function seed(knex) {
       unit_id: 1,
       lesson_number: 11,
       name: 'Introduction to Build Tools and Vite',
-      description: null,
+      description: 'Build tools automate tasks involved in preparing and running web applications, such as bundling files, optimising code, and managing dependencies. Vite is a modern frontend build tool that provides a fast development server and efficiently bundles applications for production.',
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/01-javascript/11-vite',
@@ -147,7 +147,7 @@ export async function seed(knex) {
       unit_id: 2,
       lesson_number: 1,
       name: 'An Introduction to React',
-      description: null,
+      description: 'React is a JavaScript library used to build interactive user interfaces, particularly for web applications. It allows developers to create reusable UI components and manage changing data through a concept called state.',
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/02-client-side-rendering/01-intro-to-react',
@@ -159,7 +159,7 @@ export async function seed(knex) {
       unit_id: 2,
       lesson_number: 2,
       name: 'The Virtual DOM',
-      description: null,
+      description: 'A lightweight, in-memory representation of the actual browser DOM (Document Object Model). React uses it to identify changes in the UI and efficiently update the necessary parts of the real DOM rather than rebuilding the entire page.',
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/02-client-side-rendering/02-virtual-dom',
@@ -171,7 +171,7 @@ export async function seed(knex) {
       unit_id: 2,
       lesson_number: 3,
       name: 'React Components',
-      description: null,
+      description: 'Reusable, independent building blocks used to create React user interfaces. Each component can contain its own structure, logic, and styling, allowing complex applications to be broken down into smaller, manageable pieces.',
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/02-client-side-rendering/03-react-components',
@@ -183,7 +183,7 @@ export async function seed(knex) {
       unit_id: 2,
       lesson_number: 4,
       name: 'React Props',
-      description: null,
+      description: 'Short for properties, props are used to pass data from a parent component to a child component in React. They allow components to be reusable and configurable by providing different values, such as text, numbers, or functions.',
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/02-client-side-rendering/04-react-props',
@@ -195,7 +195,7 @@ export async function seed(knex) {
       unit_id: 2,
       lesson_number: 5,
       name: 'React State',
-      description: null,
+      description: "State is data that a React component manages and can change over time, influencing what is displayed in the user interface. React's useState hook allows developers to create and update state, triggering the component to re-render when its value changes.",
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/02-client-side-rendering/06-react-state',
@@ -207,7 +207,7 @@ export async function seed(knex) {
       unit_id: 2,
       lesson_number: 6,
       name: 'Event Delegation',
-      description: null,
+      description: "A technique where a single event listener is attached to a parent element to handle events triggered by its child elements. It works through event bubbling, reducing the need to attach individual event listeners to multiple elements.",
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/02-client-side-rendering/07-event-delegation',
@@ -219,7 +219,7 @@ export async function seed(knex) {
       unit_id: 2,
       lesson_number: 7,
       name: 'Component Testing',
-      description: 'Component tests sit next to the components they test.',
+      description: "A type of software testing that checks whether individual components work as expected in isolation. In React, it can involve testing a component's rendering, user interactions, props, and state to ensure it behaves correctly.",
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/02-client-side-rendering/08-component-testing',
@@ -231,7 +231,7 @@ export async function seed(knex) {
       unit_id: 2,
       lesson_number: 8,
       name: 'React Router',
-      description: null,
+      description: "A library used to manage navigation and routing within React applications. It allows developers to display different components based on the URL, enabling users to move between pages without requiring a full browser page reload.",
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/02-client-side-rendering/09-react-router',
@@ -243,7 +243,7 @@ export async function seed(knex) {
       unit_id: 2,
       lesson_number: 9,
       name: 'React Forms',
-      description: null,
+      description: "Forms in React allow users to enter and submit information through input fields, checkboxes, dropdowns, and other elements. React can manage form data using state, allowing developers to control inputs, validate information, and handle submissions.",
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/02-client-side-rendering/10-react-forms',
@@ -255,8 +255,8 @@ export async function seed(knex) {
       id: 21,
       unit_id: 3,
       lesson_number: 1,
-      name: 'Synchronous versus asynchronous',
-      description: null,
+      name: "'Synchronous versus asynchronous'",
+      description: "Synchronous code executes one operation at a time, with each task waiting for the previous one to finish. Asynchronous code allows certain tasks, such as API requests or file operations, to run without blocking the rest of the program while waiting for a result.",
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/03-apis-async/01-sync-versus-async',
@@ -268,7 +268,7 @@ export async function seed(knex) {
       unit_id: 3,
       lesson_number: 2,
       name: 'Promises with Async/Await',
-      description: null,
+      description: "Promises represent the eventual success or failure of an asynchronous operation, such as fetching data from an API. async and await provide a cleaner, more readable way to work with promises by allowing asynchronous code to be written in a style that resembles synchronous code.",
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/03-apis-async/02-consuming-promises',
@@ -280,7 +280,7 @@ export async function seed(knex) {
       unit_id: 3,
       lesson_number: 3,
       name: 'Web APIs',
-      description: null,
+      description: "Interfaces that allow applications to communicate with external services or access browser functionality. They enable developers to perform tasks such as fetching data from servers, accessing geolocation, and interacting with browser features.",
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/03-apis-async/03-web-apis',
@@ -292,7 +292,7 @@ export async function seed(knex) {
       unit_id: 3,
       lesson_number: 4,
       name: 'CRUD and REST',
-      description: null,
+      description: "CRUD stands for Create, Read, Update, and Delete — the four fundamental operations used to manage data. REST (Representational State Transfer) is an architectural style for designing APIs, commonly using HTTP methods such as POST, GET, PUT/PATCH, and DELETE to perform CRUD operations.",
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/03-apis-async/03.5-crud-rest',
@@ -305,7 +305,7 @@ export async function seed(knex) {
       lesson_number: 5,
       name: 'Tools to consume API Endpoints',
       description:
-        'Try requests before you code them, like testing our hub’s /api/v1/lessons route in Thunder Client before LessonPage uses it.',
+        "Tools and libraries that allow applications to send requests to APIs and receive data from external services. Common examples include the JavaScript Fetch API and Axios, which can be used to perform HTTP requests such as GET, POST, PUT, and DELETE.",
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/03-apis-async/04-api-tools',
@@ -317,7 +317,7 @@ export async function seed(knex) {
       unit_id: 3,
       lesson_number: 6,
       name: 'Component Lifecycle',
-      description: null,
+      description: "The sequence of stages a React component goes through during its existence: mounting (being created), updating (when props or state change), and unmounting (being removed). React provides lifecycle behaviour through hooks such as useEffect, allowing developers to perform tasks like fetching data and cleaning up resources.",
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/03-apis-async/05-component-lifecycle',
@@ -329,7 +329,7 @@ export async function seed(knex) {
       unit_id: 3,
       lesson_number: 7,
       name: 'Managing Async State with Tanstack Query',
-      description: null,
+      description: "A library that simplifies managing asynchronous data in React applications, particularly data fetched from APIs. It handles tasks such as caching, loading and error states, background refetching, and keeping server data synchronised with the UI.",
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/03-apis-async/06-react-query',
@@ -341,7 +341,7 @@ export async function seed(knex) {
       unit_id: 3,
       lesson_number: 8,
       name: 'Mutating Data with useMutation',
-      description: null,
+      description: "A TanStack Query hook used to perform operations that create, update, or delete data on a server. It manages the mutation's loading and error states and can trigger actions such as refreshing cached data after a successful update.",
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/03-apis-async/07-react-query-mutations',
@@ -354,7 +354,7 @@ export async function seed(knex) {
       lesson_number: 9,
       name: 'Agile',
       description:
-        'How the team plans and works: stand-ups, a board and short sprints.',
+        "An iterative approach to software development that focuses on flexibility, collaboration, and delivering working software in small increments. Teams regularly review progress, gather feedback, and adapt their plans as requirements change.",
       source: 'miro',
       handbook_url: null,
       code_from_class_url:
@@ -367,7 +367,7 @@ export async function seed(knex) {
       lesson_number: 1,
       name: 'The Web',
       description:
-        'How browsers and servers talk: requests, responses and URLs.',
+        "The World Wide Web is a system of interconnected webpages and resources that can be accessed over the internet using web browsers. It uses technologies such as HTML, CSS, JavaScript, and HTTP to allow users to access and interact with information online.",
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/04-express/01-the-web',
@@ -379,7 +379,7 @@ export async function seed(knex) {
       unit_id: 4,
       lesson_number: 2,
       name: 'Networking',
-      description: 'Ports, hosts and how a request reaches your server.',
+      description: "The practice of connecting computers and devices so they can communicate and share information with each other. In web development, networking concepts such as IP addresses, DNS, HTTP, and TCP/IP help explain how browsers communicate with servers and access websites.",
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/04-express/02-networking',
@@ -391,7 +391,7 @@ export async function seed(knex) {
       unit_id: 4,
       lesson_number: 3,
       name: 'Express.js',
-      description: null,
+      description: "Express.js is a lightweight web framework for Node.js that makes building backend applications and APIs easier. It simplifies handling HTTP requests and responses, defining routes, and connecting your server to databases and other services.",
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/04-express/03-express',
@@ -403,7 +403,7 @@ export async function seed(knex) {
       unit_id: 4,
       lesson_number: 4,
       name: 'Serving Static Files',
-      description: null,
+      description: "Serving Static Files is the process of making files such as HTML, CSS, JavaScript, images, and fonts available to clients without generating them dynamically. In Express.js, the express.static() middleware is commonly used to serve these files from a designated folder.",
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/04-express/04-serving-static-files',
@@ -416,7 +416,7 @@ export async function seed(knex) {
       lesson_number: 5,
       name: 'The Filesystem',
       description:
-        'Reading and writing files with Node’s fs module, before a database takes over.',
+        "The Filesystem is how an operating system organises and stores files and folders on a storage device. In programming, applications can interact with the filesystem to read, create, update, delete, and manage files and directories.",
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/04-express/05-filesystem',
@@ -428,7 +428,7 @@ export async function seed(knex) {
       unit_id: 4,
       lesson_number: 6,
       name: 'Express Router',
-      description: null,
+      description: "Express Router is a feature of Express.js that allows you to organise routes into separate, modular files rather than keeping them all in one place. It helps keep backend applications organised by grouping related routes together, making them easier to maintain and scale.",
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/04-express/06-express-router',
@@ -440,7 +440,7 @@ export async function seed(knex) {
       unit_id: 4,
       lesson_number: 7,
       name: 'HTTP Methods',
-      description: null,
+      description: "HTTP Methods define the type of action a client wants to perform when communicating with a server. Common methods include GET to retrieve data, POST to create data, PUT or PATCH to update data, and DELETE to remove data.",
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/04-express/07-http-methods',
@@ -452,7 +452,7 @@ export async function seed(knex) {
       unit_id: 4,
       lesson_number: 8,
       name: 'Using HTTP Methods Correctly',
-      description: null,
+      description: "Using HTTP Methods Correctly means choosing the appropriate HTTP method for the action an API endpoint is designed to perform. For example, use GET to retrieve data, POST to create resources, PATCH to partially update them, and DELETE to remove them, helping keep APIs predictable and consistent.",
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/04-express/08-using-methods-correctly',
@@ -464,7 +464,7 @@ export async function seed(knex) {
       unit_id: 4,
       lesson_number: 9,
       name: 'Accepting User Data',
-      description: null,
+      description: "Accepting User Data involves receiving information submitted by a client, such as form inputs or data sent through an API request. In Express.js, this commonly involves accessing request data through req.body, req.params, or req.query, and validating it before using or storing it.",
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/04-express/09-accepting-user-data',
@@ -477,7 +477,7 @@ export async function seed(knex) {
       lesson_number: 10,
       name: 'API Keys',
       description:
-        'Keys live on the server in a .env file, never in client code.',
+        "API Keys are unique strings used to identify and authenticate an application or user when accessing an API. They help control access and track usage, and should be kept secure rather than exposed in public code or committed to version control.",
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/04-express/10-api-keys',
@@ -489,7 +489,7 @@ export async function seed(knex) {
       unit_id: 4,
       lesson_number: 11,
       name: 'Testing Routes',
-      description: null,
+      description: "Testing Routes involves checking that API endpoints respond correctly to different HTTP requests and inputs. Tests can verify response status codes, returned data, error handling, and whether routes interact with the backend as expected.",
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/04-express/11-testing-routes',
@@ -501,7 +501,7 @@ export async function seed(knex) {
       unit_id: 4,
       lesson_number: 12,
       name: 'Testing POST Routes',
-      description: null,
+      description: "Testing POST Routes involves verifying that API endpoints correctly handle requests that submit new data to the server. Tests typically check that valid data is accepted and saved, invalid data is rejected appropriately, and the correct response and status code are returned.",
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/04-express/12-testing-post-routes',
@@ -513,7 +513,7 @@ export async function seed(knex) {
       unit_id: 4,
       lesson_number: 13,
       name: 'Testing API Routes',
-      description: null,
+      description: "Testing API Routes involves checking that API endpoints behave as expected when handling different HTTP requests. Tests verify things like response data, status codes, input validation, error handling, and interactions with databases to ensure the API works reliably.",
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/04-express/13-testing-api-routes',
@@ -525,7 +525,7 @@ export async function seed(knex) {
       unit_id: 4,
       lesson_number: 14,
       name: 'Cross-origin Resource Sharing',
-      description: null,
+      description: "Cross-Origin Resource Sharing (CORS) is a browser security mechanism that controls whether a web application can make requests to a server hosted on a different origin (domain, protocol, or port). Servers use CORS headers to specify which origins are allowed to access their resources.",
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/04-express/14-cors',
@@ -537,7 +537,7 @@ export async function seed(knex) {
       unit_id: 4,
       lesson_number: 15,
       name: 'User Stories',
-      description: 'Planning what the app should do before building it.',
+      description: 'User Stories are short descriptions of a feature or requirement written from the perspective of the person using the application. They typically follow the format: "As a [type of user], I want [something], so that [benefit]", helping development teams understand what users need and why.',
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/04-express/15-user-stories',
@@ -550,7 +550,7 @@ export async function seed(knex) {
       unit_id: 5,
       lesson_number: 1,
       name: 'Introduction to Databases',
-      description: null,
+      description: "Introduction to Databases covers how applications store, organise, and retrieve data in a structured way. It introduces concepts such as tables, records, relationships, and queries, which allow applications to manage information efficiently and persistently.",
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/05-databases/01-intro-to-databases',
@@ -562,7 +562,7 @@ export async function seed(knex) {
       unit_id: 5,
       lesson_number: 2,
       name: 'Database Keys and Migrations',
-      description: null,
+      description: "Database Keys and Migrations covers how databases identify and connect records, using concepts such as primary keys and foreign keys. Migrations are version-controlled changes to a database's structure, allowing developers to create or modify tables and relationships consistently as an application evolves.",
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/05-databases/02-knex-keys',
@@ -574,7 +574,7 @@ export async function seed(knex) {
       unit_id: 5,
       lesson_number: 3,
       name: 'Database Joins',
-      description: null,
+      description: "Database Joins allow data from multiple tables to be combined using related columns, such as primary and foreign keys. They let you retrieve connected information in a single query, with common types including INNER JOIN, LEFT JOIN, and RIGHT JOIN.",
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/05-databases/03-knex-joins',
@@ -586,7 +586,7 @@ export async function seed(knex) {
       unit_id: 5,
       lesson_number: 4,
       name: 'Knex Routes',
-      description: null,
+      description: "Knex Routes involve using Knex.js within backend routes to interact with a database. They allow Express.js endpoints to perform database operations such as querying, inserting, updating, and deleting records, while keeping database logic organised and reusable.",
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/05-databases/04-knex-routes',
@@ -598,7 +598,7 @@ export async function seed(knex) {
       unit_id: 5,
       lesson_number: 5,
       name: 'Relationships',
-      description: null,
+      description: "Relationships in databases describe how records in different tables are connected to one another. Common types include one-to-one, one-to-many, and many-to-many relationships, which are typically managed using primary keys, foreign keys, and join tables.",
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/05-databases/05-relationships',
@@ -610,7 +610,7 @@ export async function seed(knex) {
       unit_id: 5,
       lesson_number: 6,
       name: 'Complex Joins',
-      description: null,
+      description: "Complex Joins involve combining data from multiple database tables using several join operations in a single query. They allow applications to retrieve more detailed, related information across complex relationships, such as connecting users, projects, and technologies.",
       source: 'miro',
       handbook_url: null,
       code_from_class_url:
@@ -622,7 +622,7 @@ export async function seed(knex) {
       unit_id: 6,
       lesson_number: 1,
       name: 'Using Auth0 with React',
-      description: null,
+      description: "Using Auth0 with React involves integrating Auth0, an authentication and identity management service, into a React application to handle user sign-in and registration. It provides features such as login, logout, and access tokens, allowing developers to manage authentication without building the entire system themselves.",
       source: 'handbook',
       handbook_url:
         'https://student-handbook.devacademy.life/bootcamp/06-fullstack/01-auth0',
@@ -634,7 +634,7 @@ export async function seed(knex) {
       unit_id: 6,
       lesson_number: 2,
       name: 'Full Stack Challenge',
-      description: null,
+      description: "Full Stack Challenge involves building an application that combines frontend and backend development with database integration. It brings together skills such as React, API development, routing, authentication, and database operations to create a complete, working application.",
       source: 'miro',
       handbook_url: null,
       code_from_class_url:
