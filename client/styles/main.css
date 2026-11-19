@@ -73,3 +73,50 @@
     @apply outline-ink outline-2 outline-offset-2;
   }
 }
+
+/* ---------- Shared components ----------
+   Use these class names in any component. Change a style here and it changes everywhere. */
+@layer components {
+ .page {
+    @apply mx-auto flex w-full max-w-6xl flex-col gap-6;
+  }
+  .crumb {
+    @apply font-mono text-sm;
+  }
+  .description {
+    @apply text-muted text-lg;
+  }
+
+  .card {
+    @apply border-line bg-surface flex flex-col gap-4 border-2 p-6;
+  }
+  .card h2 {
+    @apply text-xl;
+  }
+
+  .list {
+    @apply border-line flex flex-col border-2;
+  }
+  .list-row {
+    @apply border-line hover:bg-lilac flex items-center gap-7 border-t-2 px-6 py-4 no-underline;
+  }
+  .list-row:first-child {
+    @apply border-t-0;
+  }
+  .list-row h3 {
+    @apply font-body text-lg font-semibold;
+  }
+  .num {
+    @apply text-muted w-8 shrink-0 font-mono;
+  }
+  .grow-text {
+    @apply flex flex-2 flex-col gap-1;
+  }
+  .row-description {
+    @apply text-muted max-w-190 text-sm;
+  }
+
+  .btn {
+    @apply border-line bg-surface inline-flex min-h-11 items-center rounded-full border-2 px-4 font-semibold;
+  }
+}
