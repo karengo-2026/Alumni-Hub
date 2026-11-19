@@ -73,3 +73,5 @@
     @apply outline-ink outline-2 outline-offset-2;
   }
 }
+
+.side-panel { @apply border-line bg-surface w-[45vw] shrink-0 border-l-2 p-6; }
