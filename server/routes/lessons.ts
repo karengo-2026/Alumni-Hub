@@ -6,7 +6,13 @@ const router = express.Router()
 // GET /api/v1/lessons/:id
 router.get('/:id', async (_req, res, next) => {
   try {
-    const lesson = await db.getLessonById()
+    const id = Number(_req.params.id)
+    const lesson = await db.getLessonById(id)
+
+    if(!lesson){
+      return res.sendStatus(404)
+    }
+
     res.json(lesson)
   } catch (err) {
     next(err)

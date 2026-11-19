@@ -1,5 +1,20 @@
 import type { Lesson } from '../../models/lesson.ts'
+import db from './connection.ts'
 
-export async function getLessonById(): Promise<Lesson[]> {
-  throw new Error('Not implemented yet')
+export async function getLessonById(id: number): Promise<Lesson | undefined> {
+  const result = await db('lessons')
+    .where('lessons.id', id)
+    .select(
+      'id',
+      'unit_id as unitId',
+      'lesson_number as lessonNumber',
+      'name',
+      'description',
+      'source',
+      'handbook_url as handbookUrl',
+      'code_from_class_url as codeFromClassUrl'
+    )
+    .first()
+
+  return result
 }
