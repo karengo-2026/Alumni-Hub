@@ -2,12 +2,12 @@ import { createRoutesFromElements, Route } from 'react-router'
 import App from './components/App.tsx'
 
 import Home from './pages/Home.tsx'
-import SidePanel from './components/SidePanel.tsx'
+import LecturePanel from './components/LecturePanel.tsx'
 
 export default createRoutesFromElements(
   <Route path="/" element={<App />}>
     <Route index element={<Home />} />
-    <Route path="SidePanel" element={<SidePanel onClose={function (): void {
+    <Route path="LecturePanel" element={<LecturePanel onClose={function (): void {
       throw new Error('Function not implemented.')
     } } children={undefined} title={undefined} />}/>
   </Route>,
