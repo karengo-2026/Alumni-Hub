@@ -5,7 +5,7 @@ const lectureArray = [
   'id',
   'lecture_number as lectureNumber',
   'title',
-  'yotube_id as youtubeId',
+  'youtube_id as youtubeId',
   'length',
 ]
 
