@@ -120,3 +120,13 @@
     @apply border-line bg-surface inline-flex min-h-11 items-center rounded-full border-2 px-4 font-semibold;
   }
 }
+
+ .tiles {
+    @apply grid grid-cols-[repeat(auto-fill,minmax(220px,1fr))] gap-4;
+  }
+  .tile {
+    @apply border-line bg-surface hover:bg-lilac flex flex-col gap-2 border-2 p-5 no-underline;
+  }
+  .tile h3 {
+    @apply font-body text-lg;
+  }
