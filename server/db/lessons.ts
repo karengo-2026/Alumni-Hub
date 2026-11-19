@@ -1,3 +1,4 @@
+import { Lecture } from '../../models/lecture.ts'
 import type { Lesson } from '../../models/lesson.ts'
 import db from './connection.ts'
 
@@ -18,3 +19,20 @@ export async function getLessonById(id: number): Promise<Lesson | undefined> {
 
   return result
 }
+
+
+export async function getLecturesByLessonId(id: number): Promise <Lecture[] | undefined> {
+  const result = await db('lectures')
+    .where('lectures.lesson_id', id)
+    .select(
+      'id',
+      'lesson_id as lessonId',
+      'lecture_number as lectureNumber',
+      'title',
+      'youtube_id as youtubeId',
+      'length'
+    )
+
+    return result
+}
+
