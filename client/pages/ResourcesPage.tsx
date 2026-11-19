@@ -1,7 +1,9 @@
 import { useResources } from '../hooks/useResources.ts'
 import { useState } from 'react'
 import type { ResourceType } from '../../models/resource.ts'
+import AddResourceForm from '../components/AddResourceForm.tsx'
 
+;<AddResourceForm />
 const resourceGroups = [
   { unitId: null, title: 'General' },
   { unitId: 1, title: 'Unit 01: JavaScript Fundamentals' },
@@ -114,6 +116,7 @@ export default function ResourcesPage() {
           )
         })
       )}
+      <AddResourceForm />
     </section>
   )
 }
