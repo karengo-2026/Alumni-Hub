@@ -11,11 +11,11 @@ router.get('/:id', async (_req, res, next) => {
     const resources = await db.getResourcesByLessonId(id)
     const lectures = await db.getLecturesByLessonId(id)
 
-    if(!lesson){
+    if (!lesson) {
       return res.sendStatus(404)
     }
 
-    res.json({lesson: lesson, resources: resources, lectures: lectures})
+    res.json({ lesson: lesson, resources: resources, lectures: lectures })
   } catch (err) {
     next(err)
   }
