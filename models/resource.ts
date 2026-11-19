@@ -1,5 +1,6 @@
 /** The kinds of resource the Resources & guides page can filter by. */
-export type ResourceType = 'Docs' | 'Handbook' | 'Guide' | 'Cheatsheet' | 'Video'
+export type ResourceType =
+  'Docs' | 'Handbook' | 'Guide' | 'Cheatsheet' | 'Video'
 
 /** A link to extra learning material. Fields needed to create one. */
 export interface ResourceData {
