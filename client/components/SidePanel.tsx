@@ -23,7 +23,7 @@ export default function SidePanel({ onClose, children, title }: Props) {
   }, [onClose])
 
   return (
-    <div className="side-panel relative ml-auto">
+    <div className="panels relative ml-auto">
       <button
         type="button"
         onClick={onClose}

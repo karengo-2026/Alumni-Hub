@@ -74,4 +74,4 @@
   }
 }
 
-.side-panel { @apply border-line bg-surface w-[45vw] shrink-0 border-l-2 p-6; }
+.panels { @apply border-line bg-surface w-[45vw] shrink-0 border-l-2 p-6; }
