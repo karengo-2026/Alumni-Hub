@@ -8,7 +8,7 @@ interface Props {
   onClose: () => void
 }
 
-export default function EscapeButton({ onClose }: Props) {
+export default function LecturePanel({ onClose }: Props) {
   useEffect(() => {
     const KeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
