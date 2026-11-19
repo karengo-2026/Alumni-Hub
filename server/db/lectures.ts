@@ -1,8 +1,9 @@
-import type { LectureData } from '../../models/lecture'
+import type { Lecture } from '../../models/lecture'
 import db from './connection'
 
 const lectureArray = [
   'id',
+  'lesson_id as lessonId',
   'lecture_number as lectureNumber',
   'title',
   'youtube_id as youtubeId',
@@ -11,11 +12,11 @@ const lectureArray = [
 
 export async function getLecturesByLessonId(
   lessonId: number,
-): Promise<LectureData | undefined> {
+): Promise<Lecture[]> {
   const lecture = await db('lectures')
     .select(lectureArray)
-    .where('lectures.id', lessonId)
-    .first()
+    .where('lesson_id', lessonId)
+    .orderBy('lecture_number')
 
   return lecture
 }
