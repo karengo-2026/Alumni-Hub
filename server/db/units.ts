@@ -19,16 +19,7 @@ export async function getUnitById(
 
   const lessons = await db('lessons')
     .where({ unit_id: id })
-    .select(
-      'id',
-      'unit_id as unitId',
-      'lesson_number as lessonNumber',
-      'name',
-      'description',
-      'source',
-      'handbook_url as handbookUrl',
-      'code_from_class_url as codeFromClassUrl',
-    )
+    .select('id', 'lesson_number as lessonNumber', 'name', 'description')
     .orderBy('lesson_number', 'asc')
 
   return { ...unit, lessons }
