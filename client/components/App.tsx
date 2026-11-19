@@ -1,13 +1,14 @@
+import { Outlet } from 'react-router'
+import Sidebar from './Sidebar.tsx'
+
 function App() {
   return (
-    <>
-      <div className="app">
-        <h1>Fullstack Boilerplate - with Fruits!</h1>
-        <h2 className="text-mint bg-ink"> Heading 2</h2>
-        <h3 className="text-ink bg-lilac"> Heading 3</h3>
-        <h4> Heading 4</h4>
-      </div>
-    </>
+    <div className="flex min-h-screen">
+      <Sidebar />
+      <main className="flex-1 p-8">
+        <Outlet />
+      </main>
+    </div>
   )
 }
 
