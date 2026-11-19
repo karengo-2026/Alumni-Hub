@@ -32,7 +32,7 @@ export interface LessonDetail extends Lesson {
   lectures: Lecture[]
   /** Resources and guides matched to this lesson. */
   resources: Resource[]
-  /** For the Previous / Next buttons. Null at the start or end of a unit. */
-  previousLessonId: number | null
-  nextLessonId: number | null
+  // /** For the Previous / Next buttons. Null at the start or end of a unit. */
+  // previousLessonId: number | null
+  // nextLessonId: number | null
 }
