@@ -2,7 +2,7 @@ import { useParams } from 'react-router'
 import { useLesson } from '../hooks/useLesson'
 
 export function LessonPage() {
-  const id = useParams()
+  const { id } = useParams()
 
   const { data: lessons, isLoading, error } = useLesson(Number(id))
 
@@ -18,9 +18,14 @@ export function LessonPage() {
     return <p>No lessons found</p>
   }
 
+  const currentLesson = lessons.lesson
+  // const currentResources = lessons.resources
+  // const currentLectures = lessons.lectures
+
+
   return (
     <>
-      <p></p>
+      <p>Lesson description: {currentLesson.description}</p>
     </>
   )
 }
