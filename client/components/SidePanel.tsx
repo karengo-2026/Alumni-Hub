@@ -9,6 +9,21 @@ interface Props {
 export default function SidePanel({ resource, onClose }: Props) {
   const youtubeId = getYouTubeId(resource.url)
 
+  let handbookUrl: string | null = null
+
+  try {
+    const url = new URL(resource.url)
+
+    if (
+      url.protocol === 'https:' &&
+      url.hostname === 'student-handbook.devacademy.life'
+    ) {
+      handbookUrl = url.href
+    }
+  } catch {
+    handbookUrl = null
+  }
+
   return (
     <aside
       aria-labelledby="resource-preview-heading"
@@ -33,6 +48,16 @@ export default function SidePanel({ resource, onClose }: Props) {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
+        />
+      )}
+
+      {handbookUrl && (
+        <iframe
+          key={handbookUrl}
+          src={handbookUrl}
+          title={`Reading: ${resource.title}`}
+          className="my-4 h-[65vh] w-full border-0"
+          referrerPolicy="strict-origin-when-cross-origin"
         />
       )}
 
