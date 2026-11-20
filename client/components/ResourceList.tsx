@@ -1,4 +1,5 @@
 import type { Resource } from '../../models/resource.ts'
+import { getYouTubeId } from '../utils/youtube.ts'
 
 interface Props {
   resources: Resource[]
@@ -10,6 +11,7 @@ export default function ResourceList({ resources, onPreview }: Props) {
     <ul>
       {resources.map((resource) => {
         const canPreview =
+          getYouTubeId(resource.url) !== null ||
           resource.type === 'Guide' ||
           resource.type === 'Handbook' ||
           resource.type === 'Video'
