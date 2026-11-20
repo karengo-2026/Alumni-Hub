@@ -9,15 +9,17 @@
   className="aspect-video w-full"
 /> */
 }
-import { useEffect, type ReactNode } from 'react'
+import React, { ReactNode, useEffect } from 'react'
+import { Lecture } from '../../models/lecture'
 
 interface Props {
   onClose: () => void
+  lectures: Lecture[]
   children: ReactNode
-  title: ReactNode
 }
 
-export default function LecturePanel({ onClose, children, title }: Props) {
+export default function LecturePanel({ onClose, lectures, children }: Props) {
+  // Escape functionality
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
@@ -42,7 +44,9 @@ export default function LecturePanel({ onClose, children, title }: Props) {
       >
         X
       </button>
-      {title}
+      {lectures.map((lecture) => (
+        <p key={lecture.id}>{lecture.title}</p>
+      ))}
       {children}
     </div>
   )

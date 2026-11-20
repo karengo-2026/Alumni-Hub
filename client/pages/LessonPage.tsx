@@ -1,5 +1,6 @@
 import { useParams } from 'react-router'
 import { useLesson } from '../hooks/useLesson'
+import LecturePanel from '../components/LecturePanel'
 
 export function LessonPage() {
   const { id } = useParams()
@@ -12,20 +13,24 @@ export function LessonPage() {
 
   if (error) {
     return <p> {error.message}</p>
-  }  
+  }
 
-  if(!lessons){
+  if (!lessons) {
     return <p>No lessons found</p>
   }
 
   const currentLesson = lessons.lesson
-  // const currentResources = lessons.resources
-  // const currentLectures = lessons.lectures
-
+  const currentLectures = lessons.lectures
 
   return (
     <>
-      <p>Lesson description: {currentLesson.description}</p>
+      {/* Hard coded into return for now */}
+      <LecturePanel
+        lectures={currentLectures}
+        onClose={() => {}}
+      >
+        <p>{currentLesson.name}</p>
+      </LecturePanel>
     </>
   )
 }
