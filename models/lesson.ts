@@ -36,3 +36,9 @@ export interface LessonDetail extends Lesson {
   // previousLessonId: number | null
   // nextLessonId: number | null
 }
+
+export interface LessonInformation {
+  lesson: Lesson
+  resources: Resource[]
+  lectures: Lecture[]
+}
