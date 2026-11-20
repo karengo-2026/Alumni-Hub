@@ -34,6 +34,16 @@ const resources = [
   },
 ]
 
+// Placeholder until we track the last lesson viewed (stretch goal: localStorage)
+const lastLesson = {
+  unitId: 1,
+  unitNumber: '01',
+  unitName: 'JavaScript Fundamentals',
+  lessonNumber: 2,
+  name: 'Git and GitHub',
+  description: 'Version control for the whole project, every folder and file.',
+}
+
 export default function Home() {
   const { data: units, isPending, isError } = useUnits()
 
@@ -47,6 +57,31 @@ export default function Home() {
         Every bootcamp lesson in one place, with its handbook page, lectures and
         code from class.
       </p>
+
+      <section className="hero">
+        <span className="hero-number" aria-hidden="true">
+          {String(lastLesson.lessonNumber).padStart(2, '0')}
+        </span>
+
+        <div className="hero-content">
+          <span className="hero-label">
+            Continue where you left off (Placeholder)
+          </span>
+          <h2>
+            {String(lastLesson.lessonNumber).padStart(2, '0')} {lastLesson.name}
+          </h2>
+          <span className="crumb">
+            Unit {lastLesson.unitNumber} · {lastLesson.unitName}
+          </span>
+          <p>{lastLesson.description}</p>
+          <Link
+            to={`/units/${lastLesson.unitId}/lessons/${lastLesson.lessonNumber}`}
+            className="btn btn-primary"
+          >
+            Resume →
+          </Link>
+        </div>
+      </section>
 
       <section className="card">
         <h2>Course units</h2>

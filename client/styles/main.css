@@ -133,3 +133,25 @@
   .pill {
   @apply border-line bg-mint shrink-0 rounded-full border-2 px-4 py-1 font-mono text-sm;
 }
+
+.hero {
+  @apply bg-ink text-paper relative overflow-hidden p-10;
+}
+.hero-content {
+  @apply relative flex flex-col items-start gap-4;
+}
+.hero-label {
+  @apply text-mint font-mono text-sm tracking-widest uppercase;
+}
+.hero h2 {
+  @apply text-paper text-5xl;
+}
+.hero p {
+  @apply text-grey text-lg;
+}
+.hero-number {
+  @apply font-display text-mint/25 pointer-events-none absolute top-1/2 -right-4 -translate-y-1/2 text-[16rem] leading-none select-none;
+}
+.btn-primary {
+  @apply bg-mint text-ink border-mint no-underline;
+}
