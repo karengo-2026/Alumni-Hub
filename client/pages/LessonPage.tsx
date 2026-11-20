@@ -20,7 +20,7 @@ export function LessonPage() {
 
   return (
     <>
-      <p>{lessons}</p>
+      <p></p>
     </>
   )
 }
