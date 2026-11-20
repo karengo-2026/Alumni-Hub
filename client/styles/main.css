@@ -130,3 +130,6 @@
   .tile h3 {
     @apply font-body text-lg;
   }
+  .pill {
+  @apply border-line bg-mint shrink-0 rounded-full border-2 px-4 py-1 font-mono text-sm;
+}

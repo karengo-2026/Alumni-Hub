@@ -1,6 +1,39 @@
 import { Link } from 'react-router'
 import { useUnits } from '../hooks/useUnits.ts'
 
+// Placeholder until the resources PR is merged into main.
+// Then delete this and use: const { data: resources } = useResources()
+const resources = [
+  {
+    id: 1,
+    unit_id: null,
+    type: 'Handbook',
+    title: 'Student Handbook: Guides',
+    url: 'https://student-handbook.devacademy.life/guides',
+  },
+  {
+    id: 2,
+    unit_id: null,
+    type: 'Docs',
+    title: 'MDN Web Docs',
+    url: 'https://developer.mozilla.org/en-US/',
+  },
+  {
+    id: 31,
+    unit_id: null,
+    type: 'Guide',
+    title: 'Introduction to promptkit and AI',
+    url: 'https://www.youtube.com/watch?v=z5-2cLSFMDc',
+  },
+  {
+    id: 33,
+    unit_id: null,
+    type: 'Guide',
+    title: 'Doing more with promptkit',
+    url: 'https://www.youtube.com/watch?v=SwEKDfTT_0k',
+  },
+]
+
 export default function Home() {
   const { data: units, isPending, isError } = useUnits()
 
@@ -10,7 +43,7 @@ export default function Home() {
   return (
     <div className="page">
       <h1>Kia ora!</h1>
-      <p className="lede">
+      <p className="description">
         Every bootcamp lesson in one place, with its handbook page, lectures and
         code from class.
       </p>
@@ -23,6 +56,31 @@ export default function Home() {
               <span className="crumb">Unit {unit.number}</span>
               <h3>{unit.name}</h3>
             </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="card">
+        <div className="flex items-center justify-between">
+          <h2>Resources & Guides</h2>
+          <Link to="/resources">See all {resources.length}</Link>
+        </div>
+
+        <div className="list">
+          {resources.map((resource) => (
+            <a
+              key={resource.id}
+              href={resource.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="list-row"
+            >
+              <span className="pill">{resource.type}</span>
+              <div className="grow-text">
+                <h3>{resource.title}</h3>
+              </div>
+              <span className="btn">Read it here</span>
+            </a>
           ))}
         </div>
       </section>
