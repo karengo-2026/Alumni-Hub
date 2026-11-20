@@ -15,6 +15,24 @@ export async function getAllResources(): Promise<Resource[]> {
     .orderBy('id')
 }
 
+export async function getResourcesByLessonId(
+  lessonId: number,
+): Promise<Resource[]> {
+  return connection('resources')
+    .join('lesson_resources', 'resources.id', 'lesson_resources.resource_id')
+    .where('lesson_resources.lesson_id', lessonId)
+    .select(
+      'resources.id',
+      'resources.unit_id as unitId',
+      'resources.type',
+      'resources.title',
+      'resources.url',
+      'resources.added_by as addedBy',
+      connection.raw('NULL as description'),
+    )
+    .orderBy('resources.id')
+}
+
 export async function addResource(
   resource: ResourceData,
   addedBy: string,
