@@ -2,8 +2,8 @@ import { useResources } from '../hooks/useResources.ts'
 import { useState } from 'react'
 import type { ResourceType } from '../../models/resource.ts'
 import AddResourceForm from '../components/AddResourceForm.tsx'
+import ResourceList from '../components/ResourceList.tsx'
 
-;<AddResourceForm />
 const resourceGroups = [
   { unitId: null, title: 'General' },
   { unitId: 1, title: 'Unit 01: JavaScript Fundamentals' },
@@ -104,14 +104,7 @@ export default function ResourcesPage() {
                 {group.title} ({groupResources.length})
               </h2>
 
-              <ul>
-                {groupResources.map((resource) => (
-                  <li key={resource.id}>
-                    <span>{resource.type}: </span>
-                    <a href={resource.url}>{resource.title}</a>
-                  </li>
-                ))}
-              </ul>
+              <ResourceList resources={groupResources} />
             </section>
           )
         })
