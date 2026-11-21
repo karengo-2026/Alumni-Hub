@@ -54,7 +54,7 @@ test('embeds a handbook reading and keeps its original link', () => {
   expect(originalLink.getAttribute('target')).toBe('_blank')
 })
 
-test('calls onClose when Close preview is clicked', async () => {
+test('calls onClose when the shared Close button is clicked', async () => {
   const user = userEvent.setup()
   const onClose = vi.fn()
 
@@ -70,7 +70,31 @@ test('calls onClose when Close preview is clicked', async () => {
 
   render(<SidePanel resource={resource} onClose={onClose} />)
 
-  await user.click(screen.getByRole('button', { name: 'Close preview' }))
+  await user.click(screen.getByRole('button', { name: 'Close' }))
+
+  expect(onClose).toHaveBeenCalledTimes(1)
+})
+
+test.each([
+  ['video', 'https://www.youtube.com/watch?v=abcdefghijk'],
+  ['reading', 'https://student-handbook.devacademy.life/guides/deploying'],
+])('calls onClose when Escape is pressed for a %s', async (_kind, url) => {
+  const user = userEvent.setup()
+  const onClose = vi.fn()
+
+  const resource: Resource = {
+    id: 4,
+    unitId: 6,
+    type: 'Guide',
+    title: 'Preview resource',
+    url,
+    addedBy: null,
+    description: null,
+  }
+
+  render(<SidePanel resource={resource} onClose={onClose} />)
+
+  await user.keyboard('{Escape}')
 
   expect(onClose).toHaveBeenCalledTimes(1)
 })
